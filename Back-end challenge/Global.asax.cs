@@ -62,7 +62,7 @@ namespace Backend.Challenge
 					Id = 1,
 					Name = "Bronze sword: low quality, low price",
 					ImageUrl = "/Content/images/bronze_sword.png",
-					Price = 8,
+					UnitPrice = 8,
 					Quantity = 10
 				},
 				new ItemDbo
@@ -70,7 +70,7 @@ namespace Backend.Challenge
 					Id = 2,
 					Name = "Wooden shield",
 					ImageUrl = "/Content/images/wooden_shield.png",
-					Price = 15,
+					UnitPrice = 15,
 					Quantity = 5
 				},
 				new ItemDbo
@@ -78,7 +78,7 @@ namespace Backend.Challenge
 					Id = 3,
 					Name = "Battle axe",
 					ImageUrl = "/Content/images/battle_axe.png",
-					Price = 12,
+					UnitPrice = 12,
 					Quantity = 2
 				},
 				new ItemDbo
@@ -86,7 +86,7 @@ namespace Backend.Challenge
 					Id = 4,
 					Name = "Longsword, carefully crafted to slay your enemies",
 					ImageUrl = "/Content/images/longsword.png",
-					Price = 31,
+					UnitPrice = 31,
 					Quantity = 1
 				},
 			});

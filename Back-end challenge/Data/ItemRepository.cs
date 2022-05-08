@@ -18,13 +18,22 @@ namespace Backend.Challenge.Data
 		{
 			return _items;
 		}
-		
+
+		public void DeductStock(OrderItemModel[] order)
+		{
+			foreach (var item in order)
+			{
+				ItemDbo StockItem = c.ItemsDbo.FirstOrDefault(x => x.Id == item.Id);
+				StockItem.Quantity -= item.Quantity;
+			}			
+			c.SaveChanges();
+		}
 
 		static ItemRepository()
 		{
 			_items = c.ItemsDbo.ToList();
 		}
 
-	
+
 	}
 }

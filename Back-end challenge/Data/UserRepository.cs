@@ -28,7 +28,14 @@ namespace Backend.Challenge.Data
 
 		public List<UserOrderDbo> GetUserOrders()
 		{
-			return c.UserOrderSDbo.ToList();
+			return c.UserOrdersDbo.ToList();
+		}
+
+		// There should be additional logs here for updating balance. later.
+		public void UpdateBalance(int Userid, int Ammount)
+		{
+			UserDbo user = c.UsersDbo.FirstOrDefault(x=>x.Id==Userid);
+			user.Balance += Ammount; // Ammount can me + or -
 		}
 
 	}

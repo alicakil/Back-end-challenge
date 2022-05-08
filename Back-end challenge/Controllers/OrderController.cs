@@ -59,69 +59,82 @@ namespace Backend.Challenge.Controllers
 			4) Have we got enough stock for this order
 			5) does the user enough balance to buy them
 
-			TRANSACTION
-			URUNU STOKTAN DUS
-			ORDER ITEMS A ILGIILI KULLANICI ICIN EKLE
-			KULLANICININ BAKIYESINDEN DUS
+			TRANSACTION			
+			1) Deduct order items from stock
+			2) Save transactions to UserOrders
+			3) Deduct the total price from the user balance
 			*/
 
 			//Validations
 			// 1)
 			if (order == null)
-				return Json(new BadRequestResponseModel { Message = "order paremeter is null" });
+				return BadRequest("order paremeter is null");
 
 			if (order.Count() == 0)
-				return Json(new BadRequestResponseModel { Message = "You have to add at least one item" });
+				return BadRequest("You have to add at least one item");
+
 
 			// 2)
 			if (order.Where(x => x.Quantity < 0).Any())
-				return Json(new BadRequestResponseModel { Message = "Quantity can not be negative" });
+				return BadRequest("Quantity can not be negative");
+				
 						
 			// 3)
 			var OrderIds = order.Select(x=>x.Id);
 			var StockIds = order.Select(x=>x.Id);
-			
-			if(OrderIds.Except(StockIds).Any())
-				return Json(new BadRequestResponseModel { Message = "Order Ids are not exists in sto stock!" });
+
+			if (OrderIds.Except(StockIds).Any())
+				return BadRequest("Order Ids are not exists in sto stock!");
+				
 
 			// 4)
 			ItemRepository ItemRepo = new ItemRepository();
 			List<ItemDbo> Stocks = ItemRepo.GetAllItems();
 
 			var Exceed = from o in order
-			join s in Stocks on o.Id equals s.Id where s.Quantity < o.Quantity 
+			join s in Stocks on o.Id equals s.Id where s.Quantity < o.Quantity
 			select s.Name;			
 
 			if (Exceed.Any())
-				return Json(new BadRequestResponseModel { Message = "Insufficient stock" });
+				return BadRequest("Insufficient stock");
+				
 
 			// 5)
 			int userId = _authenticationService.GetCurrentUserId();
 
 			UserRepository userRepo = new UserRepository();
-			UserDbo user = userRepo.GetUserById(1);
+			UserDbo user = userRepo.GetUserById(userId);
 
 			var userOrders = from o in order
 						 join s in Stocks on o.Id equals s.Id
-						 select new { o.Quantity, s.UnitPrice, Price = o.Quantity * s.UnitPrice };
+						 select new { o.Id, o.Quantity, s.UnitPrice, Price = o.Quantity * s.UnitPrice };
 
 			int CartTotal = userOrders.Sum(x => x.Price);
 
 			if (user.Balance < CartTotal)
-				return Json(new BadRequestResponseModel { Message = "Insufficient balance to proceed your order" });
+				return BadRequest("Insufficient balance to proceed your order");
+				
+
+			// TRANSACTION
+			//1) deduct order items from the stock
+			ItemRepo.DeductStock(order);
+
+			//2) Save transactions to UserOrders
 
 
-			
+			//3) Deduct the total price from the user balance
+			userRepo.UpdateBalance(userId, -CartTotal);
 
 
 
+			Response.StatusCode = (int)HttpStatusCode.OK;
+			return null;
+		}
+
+		private JsonResult BadRequest(string msg)
+		{
 			Response.StatusCode = (int)HttpStatusCode.BadRequest;
-			return Json(
-				new BadRequestResponseModel
-				{
-					Message = "The backend code still needs to be written"
-				}
-			);
+			return Json(new BadRequestResponseModel { Message = msg });
 		}
 	}
 }
