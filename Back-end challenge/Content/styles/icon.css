@@ -1,0 +1,16 @@
+.icon {
+	width: 16px;
+	height: 16px;
+}
+
+.icon--cross {
+	background: url("/content/icons/cross.png");
+}
+
+.icon--minus {
+	background: url("/content/icons/minus.png");
+}
+
+.icon--plus {
+	background: url("/content/icons/plus.png");
+}

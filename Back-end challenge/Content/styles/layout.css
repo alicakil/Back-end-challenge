@@ -1,0 +1,26 @@
+﻿.layout {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.layout__header {
+	background-color: #222;
+	color: white;
+	display: flex;
+	align-items: center;
+	padding: 0 40px;
+	flex-shrink: 0;
+}
+
+.layout__content {
+	padding: 40px;
+	flex: 1;
+	overflow: auto;
+}
+
+.layout__footer {
+	border-top: 1px solid #eeeeee;
+	padding: 16px 40px;
+	margin-top: 16px;
+}

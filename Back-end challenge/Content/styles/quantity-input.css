@@ -1,0 +1,15 @@
+.quantity-input {
+	display: flex;
+}
+
+.quantity-input > * {
+	margin-right: 10px;
+}
+
+.quantity-input > *:last-child {
+	margin-right: 0;
+}
+
+.quantity-input__input {
+	width: 40px;
+}

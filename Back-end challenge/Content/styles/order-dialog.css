@@ -1,0 +1,4 @@
+.order-dialog__total {
+	display: flex;
+	justify-content: space-between;
+}

@@ -1,0 +1,19 @@
+﻿.nav-bar {
+	height: 50px;
+	list-style: none;
+	display: flex;
+	flex: 1;
+}
+
+.nav-bar__item > a {
+	height: 100%;
+	padding: 0 4px;
+	display: inline-flex;
+	align-items: center;
+	color: #9d9d9d;
+	text-decoration: none;
+}
+
+.nav-bar__item > a:hover {
+	color: white;
+}

@@ -1,0 +1,11 @@
+﻿.form-item {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+.form-item__content {
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="DATABASE">
+    <Position X="0.5" Y="0.5" Height="0.291" Width="1.513" />
+  </Comment>
+  <Comment CommentText="REPOS">
+    <Position X="2.25" Y="0.5" Height="0.323" Width="1.628" />
+  </Comment>
+  <Comment CommentText="MODELS">
+    <Position X="4.002" Y="0.5" Height="0.291" Width="1.469" />
+  </Comment>
+  <Comment CommentText="CONTROLLERS">
+    <Position X="5.75" Y="0.5" Height="0.291" Width="1.518" />
+  </Comment>
+  <Comment CommentText="SERVICES">
+    <Position X="7.5" Y="0.5" Height="0.291" Width="1.535" />
+  </Comment>
+  <Class Name="Backend.Challenge.Data.ItemDbo">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Data\ItemDbo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Data.ItemRepository">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAFAAgACAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ItemRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Data.UserDbo">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAgAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>Data\UserDbo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Data.UserRepository">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\UserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Models.Context">
+    <Position X="9.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAgAAAAAEABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Models.UserOrderDbo">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAAAAgAAAAAgAAAEAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Data\UserOrderDbo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Models.UserInfo">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Models\UserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Models.OrderItemModel">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\OrderItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Controllers.AuthenticationController">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAgAQAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\AuthenticationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Controllers.OrderController">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Controllers\OrderController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Controllers.StockController">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Controllers\StockController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Controllers.UiController">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UiController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Models.OrderStockItem">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\OrderStockItem.cs</FileName>
+      <NewMemberFileName>Models\StockItem.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Models.StockItem">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\StockItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Services.AuthenticationService">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABCAAAAAAAEAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\AuthenticationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Services.StocksService">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\StockService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Services.UserCredentialsValidator">
+    <Position X="7.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Services\UserCredentialsValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Services.UserService">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backend.Challenge.Models.BadRequestResponseModel">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\BadRequestResponseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
