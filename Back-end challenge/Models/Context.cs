@@ -13,7 +13,6 @@ namespace Backend.Challenge.Models
 
 		public DbSet<ItemDbo> ItemsDbo { get; set; }
 		public DbSet<UserDbo> UsersDbo { get; set; }
-		public DbSet<UserOrderDbo> UserOrdersDbo { get; set; }
 		public DbSet<StockItem> StockItems { get; set; }
 
 	}

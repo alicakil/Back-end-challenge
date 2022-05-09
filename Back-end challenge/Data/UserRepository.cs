@@ -11,8 +11,8 @@ namespace Backend.Challenge.Data
 
 		public UserRepository()
 		{
-			_users = c.UsersDbo.ToList();
 			c = new Context();
+			_users = c.UsersDbo.ToList();			
 		}
 
 		public UserDbo GetUserByLogin(string login)
@@ -26,17 +26,8 @@ namespace Backend.Challenge.Data
 			return user;
 		}
 
-		public List<UserOrderDbo> GetUserOrders()
-		{
-			return c.UserOrdersDbo.ToList();
-		}
 
-		// There should be additional logs here for updating balance. later.
-		public void UpdateBalance(int Userid, int Ammount)
-		{
-			UserDbo user = c.UsersDbo.FirstOrDefault(x=>x.Id==Userid);
-			user.Balance += Ammount; // Ammount can me + or -
-		}
+		
 
 	}
 }

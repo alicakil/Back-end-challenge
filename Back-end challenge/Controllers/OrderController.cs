@@ -61,12 +61,11 @@ namespace Backend.Challenge.Controllers
 
 			TRANSACTION			
 			1) Deduct order items from stock
-			2) Save transactions to UserOrders
-			3) Deduct the total price from the user balance
+			2) Deduct the total price from the user balance
 			*/
 
 			//Validations
-			// 1)
+			// 1) Check if order parameter is null or count() 0
 			if (order == null)
 				return BadRequest("order paremeter is null");
 
@@ -74,20 +73,20 @@ namespace Backend.Challenge.Controllers
 				return BadRequest("You have to add at least one item");
 
 
-			// 2)
+			// 2) Check Qty if positive
 			if (order.Where(x => x.Quantity < 0).Any())
 				return BadRequest("Quantity can not be negative");
-				
-						
-			// 3)
+
+
+			// 3) Check if stockids are exists
 			var OrderIds = order.Select(x=>x.Id);
 			var StockIds = order.Select(x=>x.Id);
 
 			if (OrderIds.Except(StockIds).Any())
 				return BadRequest("Order Ids are not exists in sto stock!");
-				
 
-			// 4)
+
+			// 4) Have we got enough stock for this order
 			ItemRepository ItemRepo = new ItemRepository();
 			List<ItemDbo> Stocks = ItemRepo.GetAllItems();
 
@@ -97,9 +96,9 @@ namespace Backend.Challenge.Controllers
 
 			if (Exceed.Any())
 				return BadRequest("Insufficient stock");
-				
 
-			// 5)
+
+			//5) does the user enough balance to buy them
 			int userId = _authenticationService.GetCurrentUserId();
 
 			UserRepository userRepo = new UserRepository();
@@ -113,19 +112,10 @@ namespace Backend.Challenge.Controllers
 
 			if (user.Balance < CartTotal)
 				return BadRequest("Insufficient balance to proceed your order");
-				
+
 
 			// TRANSACTION
-			//1) deduct order items from the stock
-			ItemRepo.DeductStock(order);
-
-			//2) Save transactions to UserOrders
-
-
-			//3) Deduct the total price from the user balance
-			userRepo.UpdateBalance(userId, -CartTotal);
-
-
+			ItemRepo.IssueOrder(userId, order, CartTotal);
 
 			Response.StatusCode = (int)HttpStatusCode.OK;
 			return null;

@@ -18,14 +18,14 @@
   <Class Name="Backend.Challenge.Data.ItemDbo">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACQAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>IAACQAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Data\ItemDbo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Backend.Challenge.Data.ItemRepository">
     <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAFAAgACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAFAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Data\ItemRepository.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -39,22 +39,15 @@
   <Class Name="Backend.Challenge.Data.UserRepository">
     <Position X="2.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAIAQAAAAAAAAAAAAAAAAAAgICACAAAAAAAAAA=</HashCode>
       <FileName>Data\UserRepository.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Backend.Challenge.Models.Context">
     <Position X="9.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAAAAAAAgAAAAAEABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAgAAEAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Context.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Backend.Challenge.Models.UserOrderDbo">
-    <Position X="0.5" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IAACAAAAAAAAAAAAgAAAAAgAAAEAAAAAAAAAgAAAAAA=</HashCode>
-      <FileName>Data\UserOrderDbo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Backend.Challenge.Models.UserInfo">
@@ -81,7 +74,7 @@
   <Class Name="Backend.Challenge.Controllers.OrderController">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAACAAAAAAQAAAAAAEAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Controllers\OrderController.cs</FileName>
     </TypeIdentifier>
   </Class>
