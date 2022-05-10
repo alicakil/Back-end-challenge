@@ -1,9 +1,9 @@
 <h1>Back-end challenge</h1>
 <br>
 <h3>Run</h3>
-Go to Models/Context.cs and modify connectionstring for your local machine then run.<br>
-App will create a initial database and sample data. <br>
-For each startup database will be recreated for in the Memory a refresh testing (global.ajax)<br>
+No setting required.
+App will create an initial database and sample data in the Memory.  <br>
+For each startup database will be recreated in the Memory (global.ajax)<br>
 To create a single DbContext instance, <b>SingleTon pattern</b> is used.
  <br>
 <h3>Updates</h3>
