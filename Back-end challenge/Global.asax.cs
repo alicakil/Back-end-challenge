@@ -15,8 +15,8 @@ namespace Backend.Challenge
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-			// Run on app startupp.
-			Context c = new Context();
+			// Create single dbContext instace for an In-Memory test.
+			Context c = Models.Context.GetSingleTon();
 
 			// ReCreate a database 
 			if (c.Database.Exists())

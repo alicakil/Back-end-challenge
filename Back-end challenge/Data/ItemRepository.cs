@@ -10,7 +10,7 @@ namespace Backend.Challenge.Data
 		private readonly List<ItemDbo> _items;
 		public ItemRepository()
 		{
-			c = new Context();
+			c = Models.Context.GetSingleTon();
 			_items = c.ItemsDbo.ToList();
 		}
 

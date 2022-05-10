@@ -11,7 +11,7 @@ namespace Backend.Challenge.Data
 
 		public UserRepository()
 		{
-			c = new Context();
+		    c = Models.Context.GetSingleTon();
 			_users = c.UsersDbo.ToList();			
 		}
 

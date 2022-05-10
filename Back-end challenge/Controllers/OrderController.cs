@@ -32,7 +32,7 @@ namespace Backend.Challenge.Controllers
 
 			List<OrderStockItem> GetStockItemsForOrder()
 			{
-				Context c = new Context();
+				Context c = Models.Context.GetSingleTon();
 				return c.ItemsDbo.Select(x => new OrderStockItem
 				{
 					Id = x.Id,

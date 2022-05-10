@@ -3,10 +3,11 @@
 <h3>Run</h3>
 Go to Models/Context.cs and modify connectionstring for your local machine then run.<br>
 App will create a initial database and sample data. <br>
-For each startup database will be recreated for a refresh testing (global.ajax)<br>
+For each startup database will be recreated for in the Memory a refresh testing (global.ajax)<br>
+To create a single DbContext instance, <b>SingleTon pattern</b> is used.
  <br>
 <h3>Updates</h3>
-•	For a persistent database, I installed entity framework. <br>
+•	To create an IN-MEMORY database, I installed entity framework and Effort.EF6 <br>
 •	Data desing is a little bit changed, ItemDbo can hold all fields related to stock for this example. <br>
 •	Key  attribute added to id fields to make primary field. <br>
 •	Sample data and database creation code added to global.ajax. <br>
